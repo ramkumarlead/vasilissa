@@ -152,6 +152,14 @@ a {
 
 @media(max-width:576px){
 
+  .page-title-header{
+    font-size: 20px;
+  }
+
+  .search-container{
+    width: 500px;
+  }
+
   .project-initiation{
     width:350px;
   }
@@ -367,10 +375,18 @@ ul {
   }
   .nav-btn{
     background-color: #22bed1;
+    height: 45px;
+    width: 135px;
+    border-radius: 5px;
+    border: none;
   }
 
   .nav-btn-2{
     background-color: #909DA5;
+    height: 45px;
+    width: 135px;
+    border-radius: 5px;
+    border: none;
   }
 
   .banner-panel {
