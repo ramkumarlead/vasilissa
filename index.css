@@ -154,12 +154,24 @@ a {
 
 @media (max-width: 415px){
   .banner-1 {
-    height:28vh!important;
-    width:100%!important
+    height:35vh!important;
+    width:100%!important;
+    background-image: url('./images/application-development\ slide\ \(2\).jpg');
+    
+    background-size: cover;
   }
+  .banner-paragraph{
+    
+    color: black!important;
+    
+}
+ 
   .banner-2 {
-    height:28vh!important;
-    width:100%!important
+    height:40vh!important;
+    width:100%!important;
+    background-image: url('./images/mobile-development\ slide\ \(2\).jpg');
+    
+    background-size: cover;
   }
 }
 @media only screen and (min-width :768px) {
@@ -206,7 +218,7 @@ a {
   }
 
   .banner-paragraph{
-    width:80vw;
+    width:50vw;
     font-size: 10px;
     color: #40484e;
     text-align: left;
