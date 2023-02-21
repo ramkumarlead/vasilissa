@@ -156,7 +156,7 @@ a {
   .banner-1 {
     height:35vh!important;
     width:100%!important;
-    background-image: url('./images/application-development\ slide\ \(2\).jpg');
+    background-image: url('./images/application-development\ slide\ \(3\).jpg');
     
     background-size: cover;
   }
@@ -169,7 +169,7 @@ a {
   .banner-2 {
     height:40vh!important;
     width:100%!important;
-    background-image: url('./images/mobile-development\ slide\ \(2\).jpg');
+    background-image: url('./images/mobile-development\ slide\ \(3\).jpg');
     
     background-size: cover;
   }
@@ -218,7 +218,7 @@ a {
   }
 
   .banner-paragraph{
-    width:50vw;
+    width:45vw;
     font-size: 10px;
     color: #40484e;
     text-align: left;
