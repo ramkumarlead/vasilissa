@@ -151,30 +151,30 @@
                   </div>
             
                   <div class="col-md-6">
-                    <form action="#" class="contFrm" method="POST">
+                    <form id="contactForm" class="contFrm" >
                       <div class="row">
                         <div class="col-sm-6">
-                          <input type="text" name="name" placeholder="Your Name" class="inptFld" required />
+                          <input type="text" name="name" id="name" placeholder="Your Name" class="inptFld" required />
                         </div>
             
                         <div class="col-sm-6">
-                          <input type="email" name="email" placeholder="Email Address" class="inptFld" required />
+                          <input type="email" name="email" id="email" placeholder="Email Address" class="inptFld" required />
                         </div>
             
                         <div class="col-sm-6">
-                          <input type="tel" name="phone" placeholder="Phone Number" class="inptFld" required />
+                          <input type="tel" name="phone"id="phone" placeholder="Phone Number" class="inptFld" required />
                         </div>
             
                         <div class="col-sm-6">
-                          <input type="text" name="sub" placeholder="Subject" class="inptFld" required />
+                          <input type="text" name="sub" id="sub" placeholder="Subject" class="inptFld" required />
                         </div>
             
                         <div class="col-12">
-                          <textarea class="inptFld" rows="" cols="" placeholder="Your Message..." required></textarea>
+                          <textarea class="inptFld" rows="" id="message" cols="" placeholder="Your Message..." required></textarea>
                         </div>
             
                         <div class="col-12">
-                          <input type="submit" name="submit" value="SUBMIT" class="inptBtn" />
+                          <input type="submit" name="submit"id="submit" value="SUBMIT" class="inptBtn" />
                         </div>
                       </div>
                     </form>
@@ -229,6 +229,65 @@
   </footer>
   </div>
 </div>
-   
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+   <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyCnxUmAytYTrO6iDTZvtCKkOZIdS0ddopU",
+    authDomain: "vasilissatech-88870.firebaseapp.com",
+    projectId: "vasilissatech-88870",
+    storageBucket: "vasilissatech-88870.appspot.com",
+    messagingSenderId: "612496379263",
+    appId: "1:612496379263:web:cf81572f1d0450c2919e4a",
+    measurementId: "G-EJ3C3PSD4X"
+  };
+  firebase.initializeApp(firebaseConfig);
+var firestore=firebase.firestore()
+// Reference messages collection
+const db=firestore.collection("formData");
+
+let submitform=document.getElementById('submit')
+
+// Listen for form submit
+submitform.addEventListener('click',(e)=>{
+  e.preventDefault();
+
+//Get value
+var name = document.getElementById('name').value;
+var sub = document.getElementById('sub').value;
+var email = document.getElementById('email').value;
+var phone = document.getElementById('phone').value;
+var message = document.getElementById('message').value;
+
+db.doc().set({
+  name:name,
+  sub:sub,
+  email:email,
+  phone:phone,
+  message:message
+}).then(()=>{
+  console.log("datasaved")
+}).catch((error)=>{
+console.log(error)
+})
+
+alert("Saved Succesfull")
+// document.querySelector('.alert').style.display = 'block';
+
+// // Hide alert after 3 seconds
+// setTimeout(function(){
+//   document.querySelector('.alert').style.display = 'none';
+// },3000);
+document.getElementById('contactForm').reset();
+});
+
+// Submit form
+
+// Function to get form value
+
+
+
+
+   </script>
 </body>
 </html>
